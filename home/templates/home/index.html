@@ -2,99 +2,126 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col">
-                
-            </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col">
+
         </div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-12 my-auto">
-                <h1 class="display-4 logo-font text-black text-center" style="text-transform: none; font-family: pacifico;">Discover our selection</h1>
-                <div class="my-5 text-center">
-                    <h4>
-                        <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-4 text-uppercase py-3" style="background-color: #d4af37;">Shop Now</a>
-                    </h4>
-                </div>
+<div class="container h-100">
+    <div class="row h-100">
+        <div class="col-12 my-auto">
+            <h1 class="display-4 logo-font text-white text-center" style="text-transform: none; font-family: pacifico;">
+                Discover our selection</h1>
+            <div class="my-5 text-center">
+                <h4>
+                    <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-4 text-uppercase py-3"
+                        style="background-color: #d4af37;">Shop Now</a>
+                </h4>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="container" style="padding-top: 30px;">
-        <div class="row">
-            <div class="col-12">
-                <h1 class="display-4 logo-font text-black text-center" style="text-transform: none; font-family: pacifico;">More Details</h1>
-            </div>
-            <div class="col-8 my-auto">
-                <p>A canvas is a statement piece and artwork all in one. Put the artistry on your wall without a worry, this canvas comes with mounting brackets!</p>
-                <ul>
-                    <li>Acid-free, PH-neutral, poly-cotton base</li>
-                    <li>20.5 mil (0.5 mm) thick canvas</li>
-                    <li>Canvas fabric weight: 13.9 oz/yd² (470 g/m²)</li>
-                    <li>Printed on textured and fade-resistant canvas (OBA-Free)</li>
-                    <li>Mounting brackets included</li>
-                    <li>Hand-glued solid wood stretcher bars</li>
-                    <li>1.5″ (3.81 cm) deep</li>
-                    <li>Blank product in the EU sourced from Latvia</li>
-                    <li>Blank product in the US sourced from the US</li>
-                </ul>
-            </div>
-            <div class="col-4">
-                <img src="{{ MEDIA_URL }}mockup.png" alt="canvas">
-            </div>            
+<div class="container" style="padding-top: 30px;">
+    <div class="row">
+        <div class="col-12">
+
         </div>
-        <hr>      
-    </div>
-
-    <!-- <div class="container" style="padding-top: 30px;">
-        <div class="row">
-            <div class="col-12">
-                <h1 class="display-4 logo-font text-black text-center" style="text-transform: none; font-family: pacifico;">Free Returns</h1>
-            </div>
-            <div class="col-12 text-center" style="padding-top: 30px;">
-                <p>If you change your mind don't worry! You can return our products within 30 days.</p>                
-            </div>
-            <div class="col-12 text-center">
-                <img src="{{ MEDIA_URL }}mockup.png" alt="canvas">
-            </div>
-        </div>        
-    </div> -->
-
-    <div class="container" style="padding-top: 30px;">
-        <div class="row">
-            <div class="col-12">
-                <h1 class="display-4 logo-font text-black text-center" style="text-transform: none; font-family: pacifico;">Quick Delivery</h1>
-            </div>
-            <div class="col-6">
-                <img src="{{ MEDIA_URL }}mockup.png" alt="canvas">
-            </div>
-            <div class="col-6 my-auto">
-                <p>We deliver worldwide in 5 days and you can track your purchases in real time.</p>                
-            </div>            
+        <div class="col-8 my-auto text-center">
+            <h1 class="display-4 logo-font text-black text-center"
+                style="text-transform: none; font-family: pacifico; margin: 30px;">
+                Our canvas</h1>
+            <h3 style="margin-bottom: 20px;">A canvas is a statement piece and artwork all in one!</h3>
+            <p> Put the artistry on your wall without a worry, this canvas comes with mounting brackets!</p>
+            <!-- <ul>
+                <li>Acid-free, PH-neutral, poly-cotton base</li>
+                <li>20.5 mil (0.5 mm) thick canvas</li>
+                <li>Canvas fabric weight: 13.9 oz/yd² (470 g/m²)</li>
+                <li>Printed on textured and fade-resistant canvas (OBA-Free)</li>
+                <li>Mounting brackets included</li>
+                <li>Hand-glued solid wood stretcher bars</li>
+                <li>1.5″ (3.81 cm) deep</li>                
+            </ul> -->
+            <table style="margin-left: auto; margin-right: auto;">
+                <tbody>
+                    <tr>
+                        <td>Acid-free, PH-neutral, poly-cotton base</td>
+                    </tr>
+                    <tr>
+                        <td>20.5 mil (0.5 mm) thick canvas</td>
+                    </tr>
+                    <tr>
+                        <td>Canvas fabric weight: 13.9 oz/yd² (470 g/m²)</td>
+                    </tr>
+                    <tr>
+                        <td>Printed on textured and fade-resistant canvas (OBA-Free)</td>
+                    </tr>
+                    <tr>
+                        <td>Mounting brackets included</td>
+                    </tr>
+                    <tr>
+                        <td>Hand-glued solid wood stretcher bars</td>
+                    </tr>
+                    <tr>
+                        <td>1.5″ (3.81 cm) deep</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <hr>       
-    </div>
-
-    <div class="container" style="padding-top: 30px;">
-        <div class="row">
-            <div class="col-12">
-                <h1 class="display-4 logo-font text-black text-center" style="text-transform: none; font-family: pacifico;">Free Returns</h1>
-            </div>
-            <div class="col-6 my-auto">
-                <p>If you change your mind don't worry! You can return our products within 30 days.</p>                
-            </div>
-            <div class="col-6">
-                <img src="{{ MEDIA_URL }}mockup.png" alt="canvas">
-            </div>            
+        <div class="col-4 my-auto text-center">
+            <img src="{{ MEDIA_URL }}returns.png" alt="canvas" style="height: 250px;">
         </div>
-        <hr>
     </div>
+    <hr>
+</div>
 
-    
+
+
+<div class="container" style="padding-top: 30px;">
+    <div class="row">
+        <div class="col-4 text-center">
+            <img src="{{ MEDIA_URL }}details.png" alt="canvas" style="height: 250px;">
+        </div>
+        <div class="col-8 my-auto text-center">
+            <h1 class="display-4 logo-font text-black text-center"
+                style="text-transform: none; font-family: pacifico; margin: 30px;">
+                Quick Delivery</h1>
+            <h3 style="margin-bottom: 20px;">Best shipping rates for canvases online! </h3>
+            <p> Shipping costs are the #1 reason for shopping cart abandonment. Our Standard shipping rates are fixed
+                and calculated based on the average shipping cost for each product. All products have similar
+                dimensions, weight, and packaging. </p>
+        </div>
+    </div>
+    <hr>
+</div>
+
+<div class="container" style="padding-top: 30px;">
+    <div class="row">
+        <!--  <div class="col-12">
+            <h1 class="display-4 logo-font text-black text-center" style="text-transform: none; font-family: pacifico;">
+                Free Returns</h1>
+        </div> -->
+        <div class="col-8 my-auto text-center">
+            <h1 class="display-4 logo-font text-black text-center"
+                style="text-transform: none; font-family: pacifico; margin: 30px;">
+                Free Returns</h1>
+            <h3 style="margin-bottom: 20px;">If you change your mind don't worry!</h3>
+            <p> Any claims for misprinted/damaged/defective items must be submitted within 4 weeks after the product has
+                been received. For packages lost in transit, all claims must be submitted no later than 4 weeks after
+                the estimated delivery date. Claims deemed an error on our part are covered at our expense.</p>
+        </div>
+        <div class="col-4">
+            <img src="{{ MEDIA_URL }}shipping.png" alt="canvas" style="height: 250px;">
+        </div>
+    </div>
+    <hr>
+</div>
+
+
 
 {% endblock %}
