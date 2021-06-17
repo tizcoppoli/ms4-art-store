@@ -52,9 +52,8 @@
         <div class="row bg-white pt-lg-2 d-none d-lg-flex" id="topnav">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font text-black my-0"><strong
-                            style="font-family: pacifico, cursive; text-transform: capitalize;">Painters</strong> Canvas Shop
-                        </h2>
+                    <h2 class="logo-font text-black my-0"><strong class="logo-capitalized">Painters</strong> Canvas Shop
+                    </h2>
                 </a>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
@@ -63,8 +62,7 @@
                         <input class="form-control border border-black rounded-4" type="text" name="q"
                             placeholder="Search our site">
                         <div class="input-group-append">
-                            <button class="form-control btn border border-black rounded-4" type="submit"
-                                style="background-color: #d4af37;">
+                            <button class="form-control btn btn-black bg-gold border border-black rounded-4" type="submit">
                                 <span class="icon">
                                     <i class="fas fa-search"></i>
                                 </span>
@@ -125,7 +123,7 @@
             </nav>
         </div>
         <div class="row text-center" id="delivery-banner">
-            <div class="col text-white" style="background-color: #d4af37;">
+            <div class="col text-white bg-gold" >
                 <h4 class="logo-font my-1">Free delivery on orders over ${{ free_delivery_threshold }}!</h4>
             </div>
         </div>
@@ -158,21 +156,15 @@
     <!-- Footer -->
 
 
-    <footer class="text-center text-lg-start bg-light text-muted" style="padding-top: 50px;">
+    <footer class="text-center text-lg-start bg-light text-muted">
 
-        <div class="row" style="background-image: url({{ MEDIA_URL }}room33.jpg);
-            height: 375px;
-            display: block;
-            background-size: cover;
-            background-position: top;">
-
+        <div class="row footer-img">
         </div>
 
         <!-- Section: Social media -->
-        <section class="mb-4">
+        <section class="mb-4 footer-social">
             <!-- Facebook -->
-            <a class="m-1 icon text-black" href="#!" role="button"><i
-                    class="fab fa-facebook-f"></i></a>
+            <a class="m-1 icon text-black" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
 
             <!-- Twitter -->
             <a class="btn btn-floating m-1 icon text-black" href="#!" role="button"><i class="fab fa-twitter"></i></a>
@@ -262,7 +254,7 @@
         <!-- Section: Links  -->
 
         <!-- Copyright -->
-        <div class="text-center p-4" style="background-color: #d4af37; color: white;">
+        <div class="text-center text-white bg-gold p-4">
             © 2021 Copyright: Art Canvas Shop
         </div>
         <!-- Copyright -->
