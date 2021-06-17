@@ -62,7 +62,8 @@
                         <input class="form-control border border-black rounded-4" type="text" name="q"
                             placeholder="Search our site">
                         <div class="input-group-append">
-                            <button class="form-control btn btn-black bg-gold border border-black rounded-4" type="submit">
+                            <button class="form-control btn btn-black bg-gold border border-black rounded-4"
+                                type="submit">
                                 <span class="icon">
                                     <i class="fas fa-search"></i>
                                 </span>
@@ -123,7 +124,7 @@
             </nav>
         </div>
         <div class="row text-center" id="delivery-banner">
-            <div class="col text-white bg-gold" >
+            <div class="col text-white bg-gold">
                 <h4 class="logo-font my-1">Free delivery on orders over ${{ free_delivery_threshold }}!</h4>
             </div>
         </div>
@@ -154,110 +155,80 @@
     {% endblock %}
 
     <!-- Footer -->
-
-
     <footer class="text-center text-lg-start bg-light text-muted">
 
         <div class="row footer-img">
         </div>
-
-        <!-- Section: Social media -->
         <section class="mb-4 footer-social">
-            <!-- Facebook -->
-            <a class="m-1 icon text-black" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
-
-            <!-- Twitter -->
-            <a class="btn btn-floating m-1 icon text-black" href="#!" role="button"><i class="fab fa-twitter"></i></a>
-
-            <!-- Google -->
-            <a class="btn btn-floating m-1 icon text-black" href="#!" role="button"><i class="fab fa-google"></i></a>
-
-            <!-- Instagram -->
-            <a class="btn btn-floating m-1 icon text-black" href="#!" role="button"><i class="fab fa-instagram"></i></a>
-
-            <!-- Linkedin -->
-            <a class="btn btn-floating m-1 icon text-black" href="#!" role="button"><i
-                    class="fab fa-linkedin-in"></i></a>
-
-            <!-- Github -->
-            <a class="btn btn-floating m-1 icon text-black" href="#!" role="button"><i class="fab fa-github"></i></a>
+            <a class="btn btn-floating m-1 icon btn-black bg-gold rounded-circle p-3" href="#!" role="button" target="_blank">
+                <i class="fab fa-facebook-f fa-lg"></i>
+            </a>
+            <a class="btn btn-floating m-1 icon btn-black bg-gold rounded-circle p-3" href="#!" role="button" target="_blank">
+                <i class="fab fa-twitter fa-lg"></i>
+            </a>
+            <a class="btn btn-floating m-1 icon btn-black bg-gold rounded-circle p-3" href="#!" role="button" target="_blank">
+                <i class="fab fa-google fa-lg"></i>
+            </a>
+            <a class="btn btn-floating m-1 icon btn-black bg-gold rounded-circle p-3" href="#!" role="button" target="_blank">
+                <i class="fab fa-instagram fa-lg"></i>
+            </a>
+            <a class="btn btn-floating m-1 icon btn-black bg-gold rounded-circle p-3" href="#!" role="button" target="_blank">
+                <i class="fab fa-linkedin-in fa-lg"></i>
+            </a>
+            <a class="btn btn-floating m-1 icon btn-black bg-gold rounded-circle p-3" href="#!" role="button" target="_blank">
+                <i class="fab fa-github fa-lg"></i>
+            </a>
         </section>
-        <!-- Section: Social media -->
-
-        <!-- Section: Links  -->
-        <section class="">
+        <section>
             <div class="container text-center text-md-start mt-5">
-                <!-- Grid row -->
                 <div class="row mt-3">
-                    <!-- Grid column -->
                     <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                        <!-- Content -->
                         <h6 class="text-uppercase fw-bold mb-4">
-                            Art Canvas Shop
+                            Painters Canvas Shop
                         </h6>
                         <p>
                             The perfect online shop if you want to add an artistic touch to your home.
                         </p>
                     </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <!-- Links -->
                         <h6 class="text-uppercase fw-bold mb-4">
                             Products
                         </h6>
                         <p>
-                            <a href="#!" class="text-reset">All Products</a>
+                            <a href="{% url 'products' %}" class="text-reset" target="_blank">All Products</a>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">Classic Art</a>
+                            <a href="{% url 'products' %}?category=sandro_botticelli,leonardo_da_vinci" class="text-reset" target="_blank">Classic Art</a>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">Modern Art</a>
+                            <a href="{% url 'products' %}?category=vincent_van_gogh,pablo_picasso" class="text-reset" target="_blank">Modern Art</a>
                         </p>
                     </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
                     <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <!-- Links -->
                         <h6 class="text-uppercase fw-bold mb-4">
                             Useful links
                         </h6>
                         <p>
-                            <a href="#!" class="text-reset">Home</a>
+                            <a href="{% url 'home' %}" class="text-reset">Home</a>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">Bag</a>
+                            <a href="{% url 'view_bag' %}" class="text-reset">Bag</a>
                         </p>
                     </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
                     <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                        <!-- Links -->
                         <h6 class="text-uppercase fw-bold mb-4">
                             Contact
                         </h6>
-                        <p><i class="fas fa-home me-3"></i> Dublin, IE</p>
-                        <p>
-                            <i class="fas fa-envelope me-3"></i>
-                            info@artcanvasshop.com
+                        <p>                            
+                            info@painterscanvasshop.com
                         </p>
                     </div>
-                    <!-- Grid column -->
                 </div>
-                <!-- Grid row -->
             </div>
         </section>
-        <!-- Section: Links  -->
-
-        <!-- Copyright -->
         <div class="text-center text-white bg-gold p-4">
-            © 2021 Copyright: Art Canvas Shop
+            © 2021 Copyright Painters Canvas Shop
         </div>
-        <!-- Copyright -->
     </footer>
     <!-- Footer -->
 

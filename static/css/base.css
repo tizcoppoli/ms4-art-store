@@ -203,6 +203,10 @@ input[name='q']::placeholder {
     padding-top: 20px;
 }
 
+.height-250 {
+    height: 250px;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
