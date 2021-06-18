@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display&family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -52,17 +52,17 @@
         <div class="row bg-white pt-lg-2 d-none d-lg-flex" id="topnav">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font text-black my-0"><strong class="logo-capitalized">Painters</strong> Canvas Shop
+                    <h2 class="logo-font text-black my-0"><strong class="logo-capitalized">Painters</strong> Canvas
                     </h2>
                 </a>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
-                        <input class="form-control border border-black rounded-4" type="text" name="q"
-                            placeholder="Search our site">
+                        <input class="form-control border border-black rounded-3" type="text" name="q"
+                            placeholder="Search a painter or a painting">
                         <div class="input-group-append">
-                            <button class="form-control btn btn-black bg-gold border border-black rounded-4"
+                            <button class="form-control btn btn-black bg-gold border border-black rounded-3"
                                 type="submit">
                                 <span class="icon">
                                     <i class="fas fa-search"></i>
@@ -160,22 +160,28 @@
         <div class="row footer-img">
         </div>
         <section class="mb-4 footer-social">
-            <a class="btn btn-floating m-1 icon btn-black bg-gold rounded-circle p-3" href="#!" role="button" target="_blank">
+            <a class="btn btn-floating m-1 icon btn-black bg-gold rounded-circle p-3" href="#!" role="button"
+                target="_blank">
                 <i class="fab fa-facebook-f fa-lg"></i>
             </a>
-            <a class="btn btn-floating m-1 icon btn-black bg-gold rounded-circle p-3" href="#!" role="button" target="_blank">
+            <a class="btn btn-floating m-1 icon btn-black bg-gold rounded-circle p-3" href="#!" role="button"
+                target="_blank">
                 <i class="fab fa-twitter fa-lg"></i>
             </a>
-            <a class="btn btn-floating m-1 icon btn-black bg-gold rounded-circle p-3" href="#!" role="button" target="_blank">
+            <a class="btn btn-floating m-1 icon btn-black bg-gold rounded-circle p-3" href="#!" role="button"
+                target="_blank">
                 <i class="fab fa-google fa-lg"></i>
             </a>
-            <a class="btn btn-floating m-1 icon btn-black bg-gold rounded-circle p-3" href="#!" role="button" target="_blank">
+            <a class="btn btn-floating m-1 icon btn-black bg-gold rounded-circle p-3" href="#!" role="button"
+                target="_blank">
                 <i class="fab fa-instagram fa-lg"></i>
             </a>
-            <a class="btn btn-floating m-1 icon btn-black bg-gold rounded-circle p-3" href="#!" role="button" target="_blank">
+            <a class="btn btn-floating m-1 icon btn-black bg-gold rounded-circle p-3" href="#!" role="button"
+                target="_blank">
                 <i class="fab fa-linkedin-in fa-lg"></i>
             </a>
-            <a class="btn btn-floating m-1 icon btn-black bg-gold rounded-circle p-3" href="#!" role="button" target="_blank">
+            <a class="btn btn-floating m-1 icon btn-black bg-gold rounded-circle p-3" href="#!" role="button"
+                target="_blank">
                 <i class="fab fa-github fa-lg"></i>
             </a>
         </section>
@@ -184,7 +190,7 @@
                 <div class="row mt-3">
                     <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                         <h6 class="text-uppercase fw-bold mb-4">
-                            Painters Canvas Shop
+                            Painters Canvas
                         </h6>
                         <p>
                             The perfect online shop if you want to add an artistic touch to your home.
@@ -198,10 +204,12 @@
                             <a href="{% url 'products' %}" class="text-reset" target="_blank">All Products</a>
                         </p>
                         <p>
-                            <a href="{% url 'products' %}?category=sandro_botticelli,leonardo_da_vinci" class="text-reset" target="_blank">Classic Art</a>
+                            <a href="{% url 'products' %}?category=sandro_botticelli,leonardo_da_vinci"
+                                class="text-reset" target="_blank">Classic Art</a>
                         </p>
                         <p>
-                            <a href="{% url 'products' %}?category=vincent_van_gogh,pablo_picasso" class="text-reset" target="_blank">Modern Art</a>
+                            <a href="{% url 'products' %}?category=vincent_van_gogh,pablo_picasso" class="text-reset"
+                                target="_blank">Modern Art</a>
                         </p>
                     </div>
                     <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
@@ -219,15 +227,15 @@
                         <h6 class="text-uppercase fw-bold mb-4">
                             Contact
                         </h6>
-                        <p>                            
-                            info@painterscanvasshop.com
+                        <p>
+                            info@painterscanvas.com
                         </p>
                     </div>
                 </div>
             </div>
         </section>
         <div class="text-center text-white bg-gold p-4">
-            © 2021 Copyright Painters Canvas Shop
+            © 2021 Copyright Painters Canvas
         </div>
     </footer>
     <!-- Footer -->
