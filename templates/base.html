@@ -96,7 +96,7 @@
                         </div>
                     </li>
                     <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-wight-bold{% else %}text-black{% endif %} nav-link"
+                        <a class="{% if grand_total %}text-gold font-wight-bold{% else %}text-black{% endif %} nav-link"
                             href="{% url 'view_bag' %}">
                             <div class="text-center">
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
@@ -125,7 +125,7 @@
         </div>
         <div class="row text-center" id="delivery-banner">
             <div class="col text-white bg-gold">
-                <h4 class="logo-font my-1">Free delivery on orders over ${{ free_delivery_threshold }}!</h4>
+                <h4 class="logo-font my-1">Free delivery if you spend more than ${{ free_delivery_threshold }}!</h4>
             </div>
         </div>
     </header>
@@ -160,27 +160,27 @@
         <div class="row footer-img w-100 mx-0">
         </div>
         <section class="mb-4 footer-social">
-            <a class="btn btn-floating m-1 icon btn-black bg-gold rounded-circle p-3" href="#!" role="button"
+            <a class="btn btn-floating m-1 icon btn-black bg-gold rounded-circle p-3" href="https://facebook.com" role="button"
                 target="_blank">
                 <i class="fab fa-facebook-f fa-lg"></i>
             </a>
-            <a class="btn btn-floating m-1 icon btn-black bg-gold rounded-circle p-3" href="#!" role="button"
+            <a class="btn btn-floating m-1 icon btn-black bg-gold rounded-circle p-3" href="https://twitter.com" role="button"
                 target="_blank">
                 <i class="fab fa-twitter fa-lg"></i>
             </a>
-            <a class="btn btn-floating m-1 icon btn-black bg-gold rounded-circle p-3" href="#!" role="button"
+            <a class="btn btn-floating m-1 icon btn-black bg-gold rounded-circle p-3" href="https://google.com" role="button"
                 target="_blank">
                 <i class="fab fa-google fa-lg"></i>
             </a>
-            <a class="btn btn-floating m-1 icon btn-black bg-gold rounded-circle p-3" href="#!" role="button"
+            <a class="btn btn-floating m-1 icon btn-black bg-gold rounded-circle p-3" href="https://instagram.com" role="button"
                 target="_blank">
                 <i class="fab fa-instagram fa-lg"></i>
             </a>
-            <a class="btn btn-floating m-1 icon btn-black bg-gold rounded-circle p-3" href="#!" role="button"
+            <a class="btn btn-floating m-1 icon btn-black bg-gold rounded-circle p-3" href="https://linkedin.com" role="button"
                 target="_blank">
                 <i class="fab fa-linkedin-in fa-lg"></i>
             </a>
-            <a class="btn btn-floating m-1 icon btn-black bg-gold rounded-circle p-3" href="#!" role="button"
+            <a class="btn btn-floating m-1 icon btn-black bg-gold rounded-circle p-3" href="https://github.com" role="button"
                 target="_blank">
                 <i class="fab fa-github fa-lg"></i>
             </a>
@@ -205,11 +205,11 @@
                         </p>
                         <p>
                             <a href="{% url 'products' %}?category=sandro_botticelli,leonardo_da_vinci"
-                                class="text-reset" target="_blank">Classic Art</a>
+                                class="text-reset" target="_blank">Classic Painters</a>
                         </p>
                         <p>
                             <a href="{% url 'products' %}?category=vincent_van_gogh,pablo_picasso" class="text-reset"
-                                target="_blank">Modern Art</a>
+                                target="_blank">Modern Painters</a>
                         </p>
                     </div>
                     <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">

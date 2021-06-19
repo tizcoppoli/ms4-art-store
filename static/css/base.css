@@ -40,6 +40,16 @@ h3, h4, h5, h6 {
     width: fit-content;
 }
 
+/********** FONT **********/
+
+.font-lato {
+    font-family: 'Lato', sans-serif;
+}
+
+.text-gold {
+    color: #d4af37;
+}
+
 /********** BUTTONS **********/
 
 .shop-now-button {
@@ -107,6 +117,14 @@ h3, h4, h5, h6 {
     position: fixed;
     background: white;
     z-index: -1;
+}
+
+a:hover {
+    color: #212529 ;
+}
+
+.hoverable:hover {    
+    opacity: 0.8;
 }
 
 a.category-badge>span.badge:hover {

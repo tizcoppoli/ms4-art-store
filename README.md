@@ -1,59 +1,366 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+<h1 align="center">Painters Canvas Shop</h1>
 
-Welcome tizianocoppoli,
+[View the live project here](https://ms3-online-cookbook.herokuapp.com/)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+This is the Painters Canvas Shop. In this ecommerce the user can find and buy different cavas with the most famous paintings in the world. It is designed to be responsible and accessible on multiple devices, making it easy to navigate for users on every device.
 
-## Gitpod Reminders
+<h2 align="center"><img src="static/doc/mockup.png"></h2>
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## User Experience (UX)
 
-`python3 -m http.server`
+### Project Goals
 
-A blue button should appear to click: _Make Public_,
+The site's primary goal is to sell canvas to the visitors who are looking for something to decorate their home, or make a gift to someone really passionate about paintings. The site has 2 target audience and an admin role:
 
-Another blue button should appear to click: _Open Browser_.
+- Guest users (first time visitors)
+- Casual customers (people who buy something without registering)
+- Registered customers (people who like the website and want to purchase more products)
+- Admin (can manage the products and the categories)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
 
-A blue button should appear to click: _Make Public_,
+### User stories
 
-Another blue button should appear to click: _Open Browser_.
+  - ### Guest User Goals
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+    1. As a Guest User, I want to find easily the products.
+    2. As a Guest User, I want to browse all canvas and use the search function.
+    3. As a Guest User, I want to explore the product page, check more info about the shop like deliveries, returns and details.
+  
 
-To log into the Heroku toolbelt CLI:
+  - ### Casual Customer Goals
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+    1. As a Casual Customer, I want to add a product to the bag and continue to browse the categories.
+    2. As a Casual Customer, I want to check the bag anytime and have a have a look about how much I'm spending.
+    3. As a Casual Customer, I want to update or remove a product from the bag.
+    4. As a Casual Customer, I want to go to the checkout and pay.
+    5. As a Casual Customer, I want to receive notifications to know if everything works or not.
+  
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidently make it public then you can create a new one with _Regenerate API Key_.
+  - ### Registered Customer Goals
 
-## Updates Since The Instructional Video
+    1. As a Registered Customer, I want to save my profile info for the next purchase.
+    2. As a Registered Customer, I want to check my previous purchases in my profile page.
+    3. As a Registered Customer, I want to edit my profile info to keep my profile updated.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+  - ### Admin Goals
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+    1. As an Admin, I want to manage the products and categories.
+    2. As an Admin, I want to access to the administration panel.
+  
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### UX - Five Planes Method
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+#### 1. Strategy
+  The primary goal is to help the users making great ramen bowls and inspire them to upload and share their own creations with the community. The business goal is to sell the recipe book to the website's audience, and add more products over time.
+  
+#### 2. Scope
+  Everything should be easy to understand. There is a simple navigation bar. The user should be able to register, sign in, see a recipe, add a like and/or a comment, edit the profile and add new recipes.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+#### 3. Structure
+  There is a home page which feature a great number or recipes, divided by categories, a callout to register, a subribe reminder and a link to purchase the recipe book. There is the page "Recipes" with all recipes and each recipe has an individual page with its details, picture, ingredients, preparation steps, and comments. The other main page is the user page, where it is possible to edit the user details, upload a new recipe and manage the other recipes.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+#### 4. Skeleton
+  There is a base template that is used for the navbar and the footer. Other templates are loaded into the main section of the base template for the home, recipe, user, login, register, edit pages. Each page have a different layout with common recurring elements. Check the wireframes for more details.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+#### 5. Surface
+  The website has a simple design with a few elemnts. The predominant color is orange and the font style is handwritten. Check the design section for more details.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### Design
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+#### Colour Scheme
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+- The palette has been generated with [Coolors](https://coolors.co/)
 
----
+<img src="static/doc/palette.png">
 
-Happy coding!
+  - Black: #000000
+  - Spanish Orange: #ef6c00
+  - Persian Green: #26a69a
+  - Cultured: #f6f5f3
+  - White: #ffffff
+
+#### Typography
+
+- "Montserrat" is the main font used throughout the whole website, with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly.
+- "Pattaya" is a clean font used for headings.
+
+#### Imagery
+- Imagery is important. The images are all high quality pictures, designed to be striking and catch the user's attention. It also has a modern, energetic aesthetic.
+
+### Wireframes
+
+- Home Page - Desktop Wireframe - [View](static/doc/home_desktop.pdf)
+- Home Page - Tablet Wireframe - [View](static/doc/home_tablet.png)
+- Home Page - Mobile Wireframe - [View](static/doc/home_mobile.png)
+- Recipe Page - Desktop Wireframe - [View](static/doc/recipe_desktop.pdf)
+- Recipe Page - Tablet Wireframe - [View](static/doc/recipe_tablet.png)
+- Recipe Page - Mobile Wireframe - [View](static/doc/recipe_mobile.png)
+- Profile Page - Desktop Wireframe - [View](static/doc/profile_desktop.pdf)
+- Profile Page - Tablet Wireframe - [View](static/doc/profile_tablet.png)
+- Profile Page - Mobile Wireframe - [View](static/doc/profile_mobile.png)
+
+## Features
+
+- Responsive on all device sizes
+- Interactive form controls
+- Button hover animations
+- Modal used to add a new recipe and category
+- Add likes and comments to the recipes
+- Pagination
+- User Sign In/Sign Up
+- Edit user informations
+- Upload new recipes feature
+- Default images for users and recipes
+- Random suggestions in each recipe page
+- Search function
+
+### Features Left to Implement
+
+- Users management
+- More filter to improve the search function
+
+## Technologies Used
+
+### Languages Used
+
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+### Frameworks, Libraries & Programs Used
+
+**Front-End**
+* [Materialize](https://materializecss.com/) 
+* [Font-Awesome](https://fontawesome.com/)
+* [Google Fonts](https://fonts.google.com/)
+* [jQuery](https://jquery.com/)
+* [Balsamiq](https://balsamiq.com/)
+* [Paint.net](https://www.getpaint.net/)
+
+**Back-end**
+* [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+* [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
+* [MongoDB](https://www.mongodb.com/1)
+* [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/)
+
+**Deployment**
+* [Heroku](https://dashboard.heroku.com/)
+* [Git](https://git-scm.com/)
+* [Github](https://github.com/)
+* [Gitpod](https://gitpod.io/)
+
+## Testing
+
+The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
+
+- [W3C HTML Validator](https://validator.w3.org/) - [Results](static/doc/html_valid.png)
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](static/doc/css_valid.png)
+- [Esprima JS Validator](https://esprima.org) - [Results](static/doc/js_valid.png)
+- [PEP8 online](http://pep8online.com/) - [Results](static/doc/python_valid.png)
+
+The deployed site was tested with Lighthouse for performance evaluation and with Responsinator for responsiveness.
+
+- [Lighthouse](https://developers.google.com/web/tools/lighthouse) - [Results](static/doc/lighthouse_report.png)
+- [Responsinator](http://www.responsinator.com/) - [Results](http://www.responsinator.com/?url=https%3A%2F%2Fms3-online-cookbook.herokuapp.com%2F)
+
+### Testing User stories from User Experience (UX) Section
+
+- #### Guest User Goals
+
+  - As a Guest User, I want to find easily the recipes.
+    1. Upon entering the site, users can immediately wiew a few recipes in carousel, and click the callout button.
+    2. The home page provide a great variety of recipes divided by categories.
+
+  - As a Guest User, I want to browse all recipes and use the search function.
+    1. In the home page there are multiple links to the recipes page.
+    2. In the navbar there is the link to visit the recipes page.
+    3. In the recipes page there is the search bar.
+
+  - As a Guest User, I want to explore the recipe page, check the comments and how many likes the recipe has.
+    1. Each recipe has its own page.
+    2. In the recipe page there is the number of likes in the heading next to the recipe name. The comments are in a section below the recipe steps.
+
+- #### Contributors Goals
+
+  - As a Contributor, I want to add likes and comments to the recipes.
+    1. A logged user can add/remove a like to a recipe with the same button in the recipe page.
+    2. A logged user can leave a comment on a recipe.
+
+  - As a Contributor, I want to upload my own recipes and share them with the community.
+    1. A logged user can upload a new recipe on the website and other users can like or comment it.
+
+  - As a Contributor, I want to edit my recipes or delete them.
+    1. In the profile page there is the list of personal recipes, and the user can edit or delete them.
+  
+  - As a Contributor, I want to edit my preferences on my profile page, like email, user image.
+    1. In the profile page it is possible to edit the preferences.
+  
+  - As a Contributor, I want to find community links.
+    1. In the footer the user can find the the social links.
+
+- #### Customers Goals
+
+  - As a Customer, I want to find the purchase link for the recipe book.
+    1. In the home page there is a section dedicated to the recipe book, and the purchase link.
+
+  - As a Customer, I want to find the email address to contact the staff.
+    1. In the footer the user can find the contact email address
+    2. The user can contact the staff about improvements on the website or the book.
+
+  - As a Customer, I want to subscribe to the newsletter to see the offers and new products.
+    1. The user can subscribe to the newsletter in the dedicated home page section.
+    2. The is no need of registration to subscribe to the newsletter.
+
+- #### Admin Goals
+
+  - As an Admin, I want to be able to edit or delete the recipes.
+    1. The admin can edit or delete every recipe from the recipe page.
+    2. The admin like other users can edit or delete the recipes from the user page.
+
+  - As an Admin, I want to create a new category, edit an existing one or delete it.
+    1. The admin can create, edit or delete categories in the manage categories page.
+
+### Further Testing
+
+- The Website was tested on Google Chrome, Firefox and Microsoft Edge.
+- The website was viewed on a variety of devices such as Desktop, Laptop, iPhone7, iPhone 8 & iPhoneX, iPad.
+- A large amount of testing was done to ensure that all pages were linking correctly.
+
+### Solved Bugs
+
+- It wasn't possible to have multiple buttons on the carousel. Solved with javascript:
+
+```
+function changeLinkToButton() {
+    href = $(".carousel-item.active").attr("href");
+    $("#carousel-button").attr("href", href)
+}
+```
+
+- Use render_template send the same POST request ad each page refresh, solved with a redirect:
+
+```
+return redirect(url_for("get_categories"))
+```
+
+- Request.form.get() doesn't get an array. Solved using:
+```
+ingredient_list = request.form.getlist("ingredient_list[]")
+
+```
+
+# Deployment
+
+***Requirements to deploy:***
+
+- An IDE: I used Gitpod but will use a IDE that is not online for my next project. I choose Gitpod as this is the recommended IDE at Code Institute.
+- Python3: In order to to run the application and use Flask.
+- PIP3: To install all application imports (such as Flask and OS).
+- A template folder: To link with the app routes.
+- A database: I choose MongoDB Atlas. 
+
+
+## Local Deployment
+
+* Open browser of choice.
+* Copy/Paste the address of [**Just Ramen repository**](https://github.com/tizianocoppoli/ms3-online-cookbook) in your search box.
+* When on the page, click on the "Code" button.
+* Copy the the |**HTTPS link**](https://github.com/tizianocoppoli/ms3-online-cookbook.git).
+* Open your IDE and in your terminal, create a virtual environement supporting python and flask and activate it.
+* Type "git clone" and paste the [**HTTPS Link**](https://github.com/tizianocoppoli/ms3-online-cookbook.git).
+* Create an environement file called "env.py" and add :
+    - MONGO_URI=mongodb+srv://...
+    - SECRET_KEY= [Your Secret key]
+* Add your env.py to .gitignore. to avoid it being uploaded.
+* In app.py, switch **debug=False** to **debug=True**
+* Upgrade pip locally with the command "pip install -U pip".
+* Install the modules used to run the application.
+* In parallel, create a MongoDB account and create a database called **"online_cookbook"**.
+* These are the following collections in the database:
+
+***categories***
+```
+_id:<ObjectId>
+category_name:<string>
+category_description:<string>
+```
+
+***contacts***
+```
+_id:<ObjectId>
+email_address:<string>
+```
+
+***users***
+```
+_id:<ObjectId>
+username:<string>
+password:<string>
+user_img:<string>
+email:<string>
+
+```
+
+***recipes***
+```
+_id:<ObjectId>
+category:<string>
+recipe_name:<string>
+is_spicy:<string>
+is_vegan:<string>
+created_by:<string>
+ingredient_list:<array>
+recipe_steps:<array>
+recipe_img:<string>
+preparation_time:<string>
+servings:<string>
+difficulty:<string>
+likes:<integer>
+like_array:<array>
+comment_array:<array>
+```
+
+* You can now run your application locally by typing the command "python3 app.py" or "run app.py" in your terminal.
+
+## Deploying on Heroku<hr>
+
+- Create a requirements.txt file using the command **pip3 freeze --local > requirements.txt** in your CLI.
+- Create a Procfile (always with an uppercase P) through the command **echo web: python app.py > Procfile**. Commit and Push.
+- Create an account on [**Heroku**](https://www.heroku.com/home).
+- Create a new app with **unique name**.
+- Select your **nearest region**.
+- Create a **new python project** within the project.
+- Link that project through your **Github repository** in the **deployment** section.
+- Navigate to Haroku Settings and set up the following in **Config Vars**
+
+```
+_IP = 0.0.0.0
+MONGO_DBNAME = [Name of DB]
+MONGO_URI = mongodb+srv://:@<cluster_name>-qtxun.mongodb.net/<database_name>?retryWrites=true&w=majority
+PORT = 5000
+SECRET_KEY = [Your Secret key]
+
+```
+* Go back to the Deploy section, select the master branch and deploy the project. 
+
+## Credits
+
+### Code
+
+- [Materialize](https://materializecss.com/): CSS library used throughout the project mainly to make the site responsive using the grid system.
+
+### Content
+
+- All content was written by the developer.
+- Psychological properties of colours text in the README.md was found [here](http://www.colour-affects.co.uk/psychological-properties-of-colours)
+
+### Media
+
+- Pictures: [Canva](https://canva.com/)
+- Editing is made by the developer.
+
+### Acknowledgements
+
+- My Mentor for continuous helpful feedback.
+- Tutor support at Code Institute for their support.
