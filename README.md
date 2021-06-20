@@ -51,19 +51,25 @@ The site's primary goal is to sell canvas to the visitors who are looking for so
 ### UX - Five Planes Method
 
 #### 1. Strategy
-  The primary goal is to help the users making great ramen bowls and inspire them to upload and share their own creations with the community. The business goal is to sell the recipe book to the website's audience, and add more products over time.
+  The primary goal is to sell canvas to the visitors who are looking for something to decorate their home, or make a gift to someone really passionate about paintings.
   
 #### 2. Scope
-  Everything should be easy to understand. There is a simple navigation bar. The user should be able to register, sign in, see a recipe, add a like and/or a comment, edit the profile and add new recipes.
+  Everything should be easy to understand. There is a simple navigation bar on the top. The user should be able to register, sign in, browse the products, add a product to the bag, and go to the checkout.
 
 #### 3. Structure
-  There is a home page which feature a great number or recipes, divided by categories, a callout to register, a subribe reminder and a link to purchase the recipe book. There is the page "Recipes" with all recipes and each recipe has an individual page with its details, picture, ingredients, preparation steps, and comments. The other main page is the user page, where it is possible to edit the user details, upload a new recipe and manage the other recipes.
+  There is a home page which all the details about the site, and the button to browse the products. There is product page with all the products and each has an individual page with its details, picture, price, description, and a button to add to the bag. From the bag the user can go the checkout page and made the purchase, edit the bag and update/remove products. The registered user can go to the profile page and update the personal information.
 
 #### 4. Skeleton
-  There is a base template that is used for the navbar and the footer. Other templates are loaded into the main section of the base template for the home, recipe, user, login, register, edit pages. Each page have a different layout with common recurring elements. Check the wireframes for more details.
+  The site is made with django. There are differents custom django apps:
+  - home
+  - products
+  - checkout
+  - bag
+  - profile
+  Each app manage a specific function of the website. The templates are made with a base template that is used for the navbar and the footer. Each app has templates that extend the base template. Check the wireframes for more details.
 
 #### 5. Surface
-  The website has a simple design with a few elemnts. The predominant color is orange and the font style is handwritten. Check the design section for more details.
+  The website has a simple design with a few elemnts. The predominant colors are gold/black/white and the font style is handwritten and serif. Check the design section for more details.
 
 ### Design
 
@@ -252,103 +258,154 @@ ingredient_list = request.form.getlist("ingredient_list[]")
 
 # Deployment
 
-***Requirements to deploy:***
+### Installation Prerequisites
 
-- An IDE: I used Gitpod but will use a IDE that is not online for my next project. I choose Gitpod as this is the recommended IDE at Code Institute.
-- Python3: In order to to run the application and use Flask.
-- PIP3: To install all application imports (such as Flask and OS).
-- A template folder: To link with the app routes.
-- A database: I choose MongoDB Atlas. 
+To be able to run the project the following technologies need to be installed in your IDE environment.
+- Python3
+- Git 
+- pip3
 
+You will need to be signed up to the following services:
+- [Heroku](https://signup.heroku.com/?c=70130000000NeLCAA0&gclid=Cj0KCQjwpdqDBhCSARIsAEUJ0hMbGWS3dMlZowadFExUalBu2L_UVf27xViAk9dBlCKLsRQI7V2PuScaAmCPEALw_wcB)
+- [AWS](https://aws.amazon.com/)
+- [Stripe](https://stripe.com/gb)
 
-## Local Deployment
+### Cloning on GitHub
 
-* Open browser of choice.
-* Copy/Paste the address of [**Just Ramen repository**](https://github.com/tizianocoppoli/ms3-online-cookbook) in your search box.
-* When on the page, click on the "Code" button.
-* Copy the the |**HTTPS link**](https://github.com/tizianocoppoli/ms3-online-cookbook.git).
-* Open your IDE and in your terminal, create a virtual environement supporting python and flask and activate it.
-* Type "git clone" and paste the [**HTTPS Link**](https://github.com/tizianocoppoli/ms3-online-cookbook.git).
-* Create an environement file called "env.py" and add :
-    - MONGO_URI=mongodb+srv://...
-    - SECRET_KEY= [Your Secret key]
-* Add your env.py to .gitignore. to avoid it being uploaded.
-* In app.py, switch **debug=False** to **debug=True**
-* Upgrade pip locally with the command "pip install -U pip".
-* Install the modules used to run the application.
-* In parallel, create a MongoDB account and create a database called **"online_cookbook"**.
-* These are the following collections in the database:
+1. Login to GitHub.com.
+2. Open rhysseddon/Vision-Furniture-MS4-Project.
+3. Click "Code" then under "Clone" copy the link with the HTTPS URL.  
+4. Go to the terminal in your IDE environment. 
+5. Change the working directory to where you want the clone to be saved by typing `cd` and the name of the directory.
+6. Type `git clone` and paste the copied HTTPS URL.
+7. After pressing enter the clone will be saved to your chosen directory.
 
-***categories***
+### Local Deployment On Gitpod
+
+1. After cloning repository on GitHub. Go to your chosen IDE environment and open the clone directory.
+2. Install the libraries from the requirements.txt, in the terminal type - `pip3 install -r requirements.txt`.
+3. Set your environment variables in your gitPod settings or in an env.py file.
+4. If setting variables within an env file add this to the .gitignore file so your variables are not exposed 
+when pushing to gitHub.
+5. Your environment variables will need to be set as follows:
+- os.environ["DEVELOPMENT"] = "True"
+- os.environ["SECRET_KEY"] = "Your Secret key"
+- os.environ["STRIPE_PUBLIC_KEY"] = "Your Stripe Public key"
+- os.environ["STRIPE_SECRET_KEY"] = "Your Stripe Secret key"
+- os.environ["STRIPE_WH_SECRET"] = "Your Stripe WH_Secret key"
+6. Create the database from the models by typing in the terminal `python3 manage.py makemigrations`. Followed by
+`python3 manage.py migrate`
+7. Load the data fixtures by typing in the terminal: `python3 manage.py loaddata products`
+8. Create a superuser so you can log in to the Django admin by typing in the terminal: `python3 manage.py createsuperuser`
+9. The site can now be run locally by typing in the terminal `python3 manage.py runserver`
+
+### Heroku Deployment
+
+1. After logging in to Heroku, select "Create New App" Choose the region closest to you and select "Create app".
+2. On the resources tab, to provision the database in the add on field search for and select "Heroku Postgres".
+3. A pop up should appear and under "Plan name" use "Hobby Dev-Free" and select "Provision".
+4. Go to your IDE and type `pip3 install dj_database_url` and `pip3 install psycopg2-binary` as these need to be 
+installed to use Postgres. Also `pip install gunicorn` for the webserver.
+5. To make sure Heroku installs all of the apps when deployed save the requirements by typing in the terminal
+`pip3 freeze > requirements.txt`
+6. Back on Heroku under settings, select "Reveal config vars" and copy the key from DATABASE_URL.
+7. In the project folder on settings.py in the database setting, comment out the current database setting.
+8. Replace with: 
 ```
-_id:<ObjectId>
-category_name:<string>
-category_description:<string>
+DATABASES = {
+    'default': dj_database_url.parse('<Enter the copied DATABASE_URL key here>')
+}
+```
+9. Add the data to the postgres database by typing in the terminal `python3 manage.py makemigrations`. Followed by
+`python3 manage.py migrate`
+10. Load the data fixtures by typing in the terminal: `python3 manage.py loaddata products`
+11. Create a superuser so you can log in to the Django admin by typing in the terminal: `python3 manage.py createsuperuser`
+12. Return to database setting in settings.py and remove code added in step 8 and uncomment the previous database setting.
+13. Create a Procfile and add `web: gunicorn vision_furniture.wsgi:application`
+14. Login to Heroku through the cli `heroku login -i`
+15. Temporarily disable collect static by typing `heroku config:set DISABLE_COLLECTSTATIC=1`
+16. Add `vision-furniture.herokuapp.com, localhost' to ALLOWED_HOSTS in settings.py.
+17. The app can now be deployed by typing in the terminal `heroku git:remote -a vision-furniture` and `git push heroku master`
+18. On Heroku dashboard under "Deploy" set "Deployment method" to connect to Gitub. Under "Automatic Deplays" set 
+"Enable automatic deploy" so the code is automatically deployed to Heroku and GitHub.
+
+### Add Static Files to AWS
+
+1. Go to AWS and find S3 under services and create a new bucket, selecting the region closest to you and 
+allowing all public access.
+2. Go to the new bucket and under properties tab, turn on static website hosting.
+3. Under permissions tab the CORS configuration tab and enter the following:
+```
+[
+  {
+      "AllowedHeaders": [
+          "Authorization"
+      ],
+      "AllowedMethods": [
+          "GET"
+      ],
+      "AllowedOrigins": [
+          "*"
+      ],
+      "ExposeHeaders": []
+  }
+]
 ```
 
-***contacts***
+4. Go to the bucket policy tab. And select "policy generator" so we can create a security policy for this bucket.
+5. Add in the following:
+- Policy type: S3 bucket policy 
+- Effect: Allow
+- Principal: `*`
+- Action: GetObject
+- Copy the ARN from the bucket policy tab. And paste it into the ARN box at the bottom.
+- Click Add statement. Then generate policy.
+6. Copy the policy into the bucket policy editor.
+7. Add `/*` onto the end of the resource key. Click Save.
+8. Go to access control list tab and set the list objects permission for everyone under the Public Access section.
+9. Create a user to access the bucket by selecting IAM from the servies menu.
+10. Select "Groups" and select "Create new group". Add in a new group name and click next, next again then "create new group"
+11. Create a policy to access the bucket, by selecting "policies" then "create policy". Select JSON tab and import managed policy. Search for 
+s3 and import "AmazonS3FullAccess".
+12. Copy the bucket policy ARN from the bucket policy in s3 > permissions. Paste it into the JSON resource key on create policy twice 
+giving the second paste a `/*` at the end. Select "review policy". Give the policy a name and description and create the policy.
+13. Go to "groups", select the new group, select "attach policy", search for the newly created policy and attach it to the policy.
+14. Go to "users", add user, create a user name, give them programmatic access and select next.
+15. Add the new user to the group and select next to create user then download the .csv file.
+17. Go to your IDE terminal type: `pip3 intsall boto3` and `pip3 intall django-storages` to install the packages 
+to connect to django. Type: `pip3 freeze > requirements.txt` so they get installed on heroku when its deployed.
+18. Add 'storages' to installed apps on the settings.py file. Add the following code to tell Django which bucket to 
+communicate with:
 ```
-_id:<ObjectId>
-email_address:<string>
+if 'USE_AWS' in os.environ:
+    # Bucket Config
+    AWS_STORAGE_BUCKET_NAME = 'vision-furniture'
+    AWS_S3_REGION_NAME = 'eu-west-2'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY_ID')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+    # Static and media files
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+
+    # Override static and media URLs in production
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 ```
-
-***users***
-```
-_id:<ObjectId>
-username:<string>
-password:<string>
-user_img:<string>
-email:<string>
-
-```
-
-***recipes***
-```
-_id:<ObjectId>
-category:<string>
-recipe_name:<string>
-is_spicy:<string>
-is_vegan:<string>
-created_by:<string>
-ingredient_list:<array>
-recipe_steps:<array>
-recipe_img:<string>
-preparation_time:<string>
-servings:<string>
-difficulty:<string>
-likes:<integer>
-like_array:<array>
-comment_array:<array>
-```
-
-* You can now run your application locally by typing the command "python3 app.py" or "run app.py" in your terminal.
-
-## Deploying on Heroku<hr>
-
-- Create a requirements.txt file using the command **pip3 freeze --local > requirements.txt** in your CLI.
-- Create a Procfile (always with an uppercase P) through the command **echo web: python app.py > Procfile**. Commit and Push.
-- Create an account on [**Heroku**](https://www.heroku.com/home).
-- Create a new app with **unique name**.
-- Select your **nearest region**.
-- Create a **new python project** within the project.
-- Link that project through your **Github repository** in the **deployment** section.
-- Navigate to Haroku Settings and set up the following in **Config Vars**
-
-```
-_IP = 0.0.0.0
-MONGO_DBNAME = [Name of DB]
-MONGO_URI = mongodb+srv://:@<cluster_name>-qtxun.mongodb.net/<database_name>?retryWrites=true&w=majority
-PORT = 5000
-SECRET_KEY = [Your Secret key]
-
-```
-* Go back to the Deploy section, select the master branch and deploy the project. 
+19. On Heroku add the AWS keys from the .csv file to the config vars. Also add USE_AWS: True, so the that the setting file knows 
+to use the AWS configuration when deploying to Heroku. Remove the COLLECTSTATIC variable.
+20. Push all the changes to Github. Which will trigger an automatic deployment to Heroku.
 
 ## Credits
 
+I used the Code Institute Boutique Ado Mini-Project by Chris Zielinski as the main basis of my own project.
+
 ### Code
 
-- [Materialize](https://materializecss.com/): CSS library used throughout the project mainly to make the site responsive using the grid system.
+- [Bootstrap](https://materializecss.com/): CSS library used throughout the project mainly to make the site responsive using the grid system.
 
 ### Content
 
