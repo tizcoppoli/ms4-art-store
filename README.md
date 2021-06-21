@@ -174,58 +174,58 @@ The deployed site was tested with Lighthouse for performance evaluation and with
 
 - #### Guest User Goals
 
-  - As a Guest User, I want to find easily the recipes.
-    1. Upon entering the site, users can immediately wiew a few recipes in carousel, and click the callout button.
-    2. The home page provide a great variety of recipes divided by categories.
+  - As a Guest User, I want to find easily the products.
+    1. Upon entering the site, users immediately wiew the callout button to browse all products.
+    2. The website provide a great navbar always visible with links for the products page and the categories.
 
-  - As a Guest User, I want to browse all recipes and use the search function.
-    1. In the home page there are multiple links to the recipes page.
-    2. In the navbar there is the link to visit the recipes page.
-    3. In the recipes page there is the search bar.
+  - As a Guest User, I want to browse all canvas and use the search function.
+    1. In the navbar the user can search a name of a paintings or an artist.
+    2. In the products page the user can scroll to see all the products and return to the top easily.
+    3. In the products page each canvas has the price, the rating and the artist's name.
 
-  - As a Guest User, I want to explore the recipe page, check the comments and how many likes the recipe has.
-    1. Each recipe has its own page.
-    2. In the recipe page there is the number of likes in the heading next to the recipe name. The comments are in a section below the recipe steps.
+  - As a Guest User, I want to explore the product page, check more info about the shop like deliveries, returns and details.
+    1. Each canvas has its own page where the user can read the description of the painting, add to the bag, check the price, zoom the image.
+    2. In the home page the user can scroll to the section below the callot to read more details about the canvas itself, the shippings, and the returns.
 
-- #### Contributors Goals
+- #### Casual Customer Goals
 
-  - As a Contributor, I want to add likes and comments to the recipes.
-    1. A logged user can add/remove a like to a recipe with the same button in the recipe page.
-    2. A logged user can leave a comment on a recipe.
+  - As a Casual Customer, I want to add a product to the bag and continue to browse the categories.
+    1. In the product detail page the user can add a product to the bag and choose the quantity.
+    2. After adding a product to the bag the user remain on the product page to continue browse the other products.
 
-  - As a Contributor, I want to upload my own recipes and share them with the community.
-    1. A logged user can upload a new recipe on the website and other users can like or comment it.
+  - As a Casual Customer, I want to check the bag anytime and have a have a look about how much I'm spending.
+    1. There is the bag icon in the navbar that shows anytime how much the user is spending.
 
-  - As a Contributor, I want to edit my recipes or delete them.
-    1. In the profile page there is the list of personal recipes, and the user can edit or delete them.
+  - As a Casual Customer, I want to update or remove a product from the bag.
+    1. The user can go to the bag page and can change quantity to a product or remove it from the bag.
   
-  - As a Contributor, I want to edit my preferences on my profile page, like email, user image.
-    1. In the profile page it is possible to edit the preferences.
+  - As a Casual Customer, I want to go to the checkout and pay.
+    1. From the bag the user can go the checkout page and finalize the purchase.
   
-  - As a Contributor, I want to find community links.
-    1. In the footer the user can find the the social links.
+  - As a Casual Customer, I want to receive notifications to know if everything works or not.
+    1. The website implements toasts for notifications that show up on the top right corner each time an action is performed by the user.
 
-- #### Customers Goals
+- #### Registered Customer Goals
 
-  - As a Customer, I want to find the purchase link for the recipe book.
-    1. In the home page there is a section dedicated to the recipe book, and the purchase link.
+  - As a Registered Customer, I want to save my profile info for the next purchase.
+    1. In the checkout page the user can flag the option to save the personal information in the profile.
 
-  - As a Customer, I want to find the email address to contact the staff.
-    1. In the footer the user can find the contact email address
-    2. The user can contact the staff about improvements on the website or the book.
+  - As a Registered Customer, I want to check my previous purchases in my profile page.
+    1. In the profile page the user can check the previous purchases anytime
+    2. The user can click on a particular order to check the details.
 
-  - As a Customer, I want to subscribe to the newsletter to see the offers and new products.
-    1. The user can subscribe to the newsletter in the dedicated home page section.
-    2. The is no need of registration to subscribe to the newsletter.
+  - As a Registered Customer, I want to edit my profile info to keep my profile updated.
+    1. The user can go to the profile page and edit the informations anytime.
+    2. In the checkout page the user can edit the information and flag the option to save them to update the profile.
 
 - #### Admin Goals
 
-  - As an Admin, I want to be able to edit or delete the recipes.
-    1. The admin can edit or delete every recipe from the recipe page.
-    2. The admin like other users can edit or delete the recipes from the user page.
+  - As an Admin, I want to manage the products.
+    1. The admin can edit or delete every product from the products page.
+    2. The admin can edit or delete a product also from the product detail page.
 
-  - As an Admin, I want to create a new category, edit an existing one or delete it.
-    1. The admin can create, edit or delete categories in the manage categories page.
+  - As an Admin, I want to access to the administration panel.
+    1. The admin can access to the django administration panel and edit the products and the categories.
 
 ### Further Testing
 
