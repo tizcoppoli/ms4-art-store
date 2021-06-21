@@ -110,20 +110,24 @@ The site's primary goal is to sell canvas to the visitors who are looking for so
 - Responsive on all device sizes
 - Interactive form controls
 - Button hover animations
-- Modal used to add a new recipe and category
-- Add likes and comments to the recipes
-- Pagination
+- Notification toasts
+- Search bar
+- Sorting products by name/rating/category/price
+- Add a product to the bag
+- Update/remove a product to the bag
+- Save user's info during the checkout
+- Stripe checkout
+- Stripe webhooks
 - User Sign In/Sign Up
 - Edit user informations
-- Upload new recipes feature
-- Default images for users and recipes
-- Random suggestions in each recipe page
-- Search function
+- Profile page with the history of orders
+- Default images for the product
+- Admin panel to manage products and categories
 
 ### Features Left to Implement
 
-- Users management
-- More filter to improve the search function
+- User profile
+- More filters to improve the search function
 
 ## Technologies Used
 
@@ -137,7 +141,7 @@ The site's primary goal is to sell canvas to the visitors who are looking for so
 ### Frameworks, Libraries & Programs Used
 
 **Front-End**
-* [Materialize](https://materializecss.com/) 
+* [Bootstrap](https://getbootstrap.com/) 
 * [Font-Awesome](https://fontawesome.com/)
 * [Google Fonts](https://fonts.google.com/)
 * [jQuery](https://jquery.com/)
@@ -145,13 +149,12 @@ The site's primary goal is to sell canvas to the visitors who are looking for so
 * [Paint.net](https://www.getpaint.net/)
 
 **Back-end**
-* [Flask](https://flask.palletsprojects.com/en/1.1.x/)
-* [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
-* [MongoDB](https://www.mongodb.com/1)
-* [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/)
+* [Django](https://www.djangoproject.com/)* 
+* [Stripe](https://stripe.com/)
 
 **Deployment**
 * [Heroku](https://dashboard.heroku.com/)
+* [AWS](https://aws.amazon.com/)
 * [Git](https://git-scm.com/)
 * [Github](https://github.com/)
 * [Gitpod](https://gitpod.io/)
@@ -235,25 +238,11 @@ The deployed site was tested with Lighthouse for performance evaluation and with
 
 ### Solved Bugs
 
-- It wasn't possible to have multiple buttons on the carousel. Solved with javascript:
+- The footer didn't look good in the profile page because a </div> was missing in the template, and the footer weren't inside the proper container-fluid div. 
 
+- The search function didn't work with category names. Fixed with the following code in the all_products view:
 ```
-function changeLinkToButton() {
-    href = $(".carousel-item.active").attr("href");
-    $("#carousel-button").attr("href", href)
-}
-```
-
-- Use render_template send the same POST request ad each page refresh, solved with a redirect:
-
-```
-return redirect(url_for("get_categories"))
-```
-
-- Request.form.get() doesn't get an array. Solved using:
-```
-ingredient_list = request.form.getlist("ingredient_list[]")
-
+queries = Q(name__icontains=query) | Q(description__icontains=query) | Q(category__name__icontains=query)
 ```
 
 # Deployment
