@@ -10,7 +10,7 @@ This is the Painters Canvas Shop. In this ecommerce the user can find and buy di
 
 ### Project Goals
 
-The site's primary goal is to sell canvas to the visitors who are looking for something to decorate their home, or make a gift to someone really passionate about paintings. The site has 2 target audience and an admin role:
+The site's primary goal is to sell canvas to the visitors who are looking for something to decorate their home, or make a gift to someone really passionate about art. The site has 3 target audience and an admin role:
 
 - Guest users (first time visitors)
 - Casual customers (people who buy something without registering)
@@ -30,7 +30,7 @@ The site's primary goal is to sell canvas to the visitors who are looking for so
   - ### Casual Customer Goals
 
     1. As a Casual Customer, I want to add a product to the bag and continue to browse the categories.
-    2. As a Casual Customer, I want to check the bag anytime and have a have a look about how much I'm spending.
+    2. As a Casual Customer, I want to check the bag anytime and have a look about how much I'm spending.
     3. As a Casual Customer, I want to update or remove a product from the bag.
     4. As a Casual Customer, I want to go to the checkout and pay.
     5. As a Casual Customer, I want to receive notifications to know if everything works or not.
@@ -51,7 +51,7 @@ The site's primary goal is to sell canvas to the visitors who are looking for so
 ### UX - Five Planes Method
 
 #### 1. Strategy
-  The primary goal is to sell canvas to the visitors who are looking for something to decorate their home, or make a gift to someone really passionate about paintings.
+  The primary goal is to sell canvas to the visitors who are looking for something to decorate their home, or make a gift to someone really passionate about art.
   
 #### 2. Scope
   Everything should be easy to understand. There is a simple navigation bar on the top. The user should be able to register, sign in, browse the products, add a product to the bag, and go to the checkout.
@@ -66,10 +66,11 @@ The site's primary goal is to sell canvas to the visitors who are looking for so
   - checkout
   - bag
   - profile
+
   Each app manage a specific function of the website. The templates are made with a base template that is used for the navbar and the footer. Each app has templates that extend the base template. Check the wireframes for more details.
 
 #### 5. Surface
-  The website has a simple design with a few elemnts. The predominant colors are gold/black/white and the font style is handwritten and serif. Check the design section for more details.
+  The website has a simple design with a few elements. The predominant colors are gold/black/white and the font style is handwritten and serif. Check the design section for more details.
 
 ### Design
 
@@ -77,33 +78,31 @@ The site's primary goal is to sell canvas to the visitors who are looking for so
 
 - The palette has been generated with [Coolors](https://coolors.co/)
 
-<img src="static/doc/palette.png">
+<img src="doc/palette.png">
 
   - Black: #000000
-  - Spanish Orange: #ef6c00
-  - Persian Green: #26a69a
-  - Cultured: #f6f5f3
+  - Davys Grey: #555555
+  - Slate Gray: #6c757d
+  - Gold Metallic: #d4af37
   - White: #ffffff
 
 #### Typography
 
-- "Montserrat" is the main font used throughout the whole website, with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly.
-- "Pattaya" is a clean font used for headings.
+- 'Lato' is the main font used throughout the whole website, with 'Sans Serif' as the fallback font in case for any reason the font isn't being imported into the site correctly.
+- 'Playfair Display' is a serif font used for headings.
+- 'Pacifico' is am handwritten font used for logo and names.
 
 #### Imagery
 - Imagery is important. The images are all high quality pictures, designed to be striking and catch the user's attention. It also has a modern, energetic aesthetic.
 
 ### Wireframes
 
-- Home Page - Desktop Wireframe - [View](static/doc/home_desktop.pdf)
-- Home Page - Tablet Wireframe - [View](static/doc/home_tablet.png)
-- Home Page - Mobile Wireframe - [View](static/doc/home_mobile.png)
-- Recipe Page - Desktop Wireframe - [View](static/doc/recipe_desktop.pdf)
-- Recipe Page - Tablet Wireframe - [View](static/doc/recipe_tablet.png)
-- Recipe Page - Mobile Wireframe - [View](static/doc/recipe_mobile.png)
-- Profile Page - Desktop Wireframe - [View](static/doc/profile_desktop.pdf)
-- Profile Page - Tablet Wireframe - [View](static/doc/profile_tablet.png)
-- Profile Page - Mobile Wireframe - [View](static/doc/profile_mobile.png)
+- Home Page - Desktop Wireframe - [View](doc/home_desktop.pdf)
+- Home Page - Tablet Wireframe - [View](doc/home_tablet.png)
+- Home Page - Mobile Wireframe - [View](doc/home_mobile.png)
+- Canvas Page - Desktop Wireframe - [View](doc/product_desktop.pdf)
+- Canvas Page - Tablet Wireframe - [View](doc/product_tablet.png)
+- Canvas Page - Mobile Wireframe - [View](doc/product_mobile.png)
 
 ## Features
 
@@ -149,7 +148,7 @@ The site's primary goal is to sell canvas to the visitors who are looking for so
 * [Paint.net](https://www.getpaint.net/)
 
 **Back-end**
-* [Django](https://www.djangoproject.com/)* 
+* [Django](https://www.djangoproject.com/) 
 * [Stripe](https://stripe.com/)
 
 **Deployment**
