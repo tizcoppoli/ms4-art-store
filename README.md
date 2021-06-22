@@ -1,6 +1,6 @@
 <h1 align="center">Painters Canvas Shop</h1>
 
-[View the live project here](https://ms3-online-cookbook.herokuapp.com/)
+[View the live project here](https://ms4-art-store.herokuapp.com/)
 
 This is the Painters Canvas Shop. In this ecommerce the user can find and buy different cavas with the most famous paintings in the world. It is designed to be responsible and accessible on multiple devices, making it easy to navigate for users on every device.
 
@@ -390,20 +390,22 @@ to use the AWS configuration when deploying to Heroku. Remove the COLLECTSTATIC 
 
 ## Credits
 
-I used the Code Institute Boutique Ado Mini-Project by Chris Zielinski as the main basis of my own project.
+I used the Code Institute Boutique Ado Mini-Project by Chris Zielinski as the main basis of this project.
 
 ### Code
 
-- [Bootstrap](https://materializecss.com/): CSS library used throughout the project mainly to make the site responsive using the grid system.
+- [Bootstrap](https://getbootstrap.com/): CSS library used throughout the project mainly to style and to make the site responsive using the grid system.
 
 ### Content
 
-- All content was written by the developer.
+- Paintings descriptions and images are taken from [this blog article](https://www.timeout.com/newyork/art/top-famous-paintings-in-art-history-ranked)
+- The remaining content was written by the developer.
 - Psychological properties of colours text in the README.md was found [here](http://www.colour-affects.co.uk/psychological-properties-of-colours)
 
 ### Media
 
-- Pictures: [Canva](https://canva.com/)
+- Icons: [Noun Project](https://thenounproject.com/)
+- Pictures: [Photowall](https://www.photowall.com/)
 - Editing is made by the developer.
 
 ### Acknowledgements
