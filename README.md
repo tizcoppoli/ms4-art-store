@@ -4,7 +4,7 @@
 
 This is the Painters Canvas Shop. In this ecommerce the user can find and buy different cavas with the most famous paintings in the world. It is designed to be responsible and accessible on multiple devices, making it easy to navigate for users on every device.
 
-<h2 align="center"><img src="static/doc/mockup.png"></h2>
+<h2 align="center"><img src="doc/website-home.png"></h2>
 
 ## User Experience (UX)
 
@@ -255,14 +255,14 @@ To be able to run the project the following technologies need to be installed in
 - pip3
 
 You will need to be signed up to the following services:
-- [Heroku](https://signup.heroku.com/?c=70130000000NeLCAA0&gclid=Cj0KCQjwpdqDBhCSARIsAEUJ0hMbGWS3dMlZowadFExUalBu2L_UVf27xViAk9dBlCKLsRQI7V2PuScaAmCPEALw_wcB)
+- [Heroku](https://signup.heroku.com/)
 - [AWS](https://aws.amazon.com/)
-- [Stripe](https://stripe.com/gb)
+- [Stripe](https://stripe.com/)
 
 ### Cloning on GitHub
 
 1. Login to GitHub.com.
-2. Open rhysseddon/Vision-Furniture-MS4-Project.
+2. Open [this repository.](https://github.com/tizianocoppoli/ms4-art-store)
 3. Click "Code" then under "Clone" copy the link with the HTTPS URL.  
 4. Go to the terminal in your IDE environment. 
 5. Change the working directory to where you want the clone to be saved by typing `cd` and the name of the directory.
