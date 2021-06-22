@@ -19,36 +19,28 @@
 
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Classic Painters
+                Classic
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
                 <a href="{% url 'products' %}?category=sandro_botticelli" class="dropdown-item">Sandro Botticelli</a>
-                <a href="{% url 'products' %}?category=leonardo_da_vinci" class="dropdown-item">Leonardo da Vinci</a>                
-                <a href="{% url 'products' %}?category=sandro_botticelli,leonardo_da_vinci" class="dropdown-item">All Classic Painters</a>
+                <a href="{% url 'products' %}?category=leonardo_da_vinci" class="dropdown-item">Leonardo da Vinci</a>
+                <a href="{% url 'products' %}?category=johannes_vermeer" class="dropdown-item">Johannes Vermeer</a>
+                <a href="{% url 'products' %}?category=sandro_botticelli,leonardo_da_vinci,johannes_vermeer" class="dropdown-item">All Classic Painters</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="homeware-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Modern Painters
+                Modern
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
                 <a href="{% url 'products' %}?category=vincent_van_gogh" class="dropdown-item">Vincent van Gogh</a>
                 <a href="{% url 'products' %}?category=pablo_picasso" class="dropdown-item">Pablo Picasso</a>
-                <a href="{% url 'products' %}?category=vincent_van_gogh,pablo_picasso" class="dropdown-item">All Modern Painters</a>
+                <a href="{% url 'products' %}?category=caspar_david_friedrich" class="dropdown-item">Caspar David Friedrich</a>
+                <a href="{% url 'products' %}?category=georges_seurat" class="dropdown-item">Georges Seurat</a>
+                <a href="{% url 'products' %}?category=gustav_klimt" class="dropdown-item">Gustav Klimt</a>
+                <a href="{% url 'products' %}?category=vincent_van_gogh,pablo_picasso,caspar_david_friedrich,georges_seurat,gustav_klimt" class="dropdown-item">All Modern Painters</a>
             </div>
-        </li>
-
-        <!-- <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Special Offers
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
-                <a href="{% url 'products' %}?category=deals" class="dropdown-item">Deals</a>
-                <a href="{% url 'products' %}?category=clearance" class="dropdown-item">Clearance</a>
-                <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="dropdown-item">All Specials</a>
-            </div>
-        </li> -->
+        </li>        
     </ul>
 </div>
