@@ -122,6 +122,7 @@ The site's primary goal is to sell canvas to the visitors who are looking for so
 - Profile page with the history of orders
 - Default images for the product
 - Admin panel to manage products and categories
+- Gmail integration to send automatic emails
 
 ### Features Left to Implement
 
@@ -171,15 +172,14 @@ Card payments:
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
-- [W3C HTML Validator](https://validator.w3.org/) - [Results](static/doc/html_valid.png)
-- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](static/doc/css_valid.png)
-- [Esprima JS Validator](https://esprima.org) - [Results](static/doc/js_valid.png)
-- [PEP8 online](http://pep8online.com/) - [Results](static/doc/python_valid.png)
+- [W3C HTML Validator](https://validator.w3.org/)
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
+- [Esprima JS Validator](https://esprima.org)
+- [PEP8 online](http://pep8online.com/)
 
-The deployed site was tested with Lighthouse for performance evaluation and with Responsinator for responsiveness.
+The deployed site was tested with Lighthouse for performance evaluation.
 
-- [Lighthouse](https://developers.google.com/web/tools/lighthouse) - [Results](static/doc/lighthouse_report.png)
-- [Responsinator](http://www.responsinator.com/) - [Results](http://www.responsinator.com/?url=https%3A%2F%2Fms3-online-cookbook.herokuapp.com%2F)
+- [Lighthouse](https://developers.google.com/web/tools/lighthouse) - [Results](doc/lighthouse.png)
 
 ### Testing User stories from User Experience (UX) Section
 
