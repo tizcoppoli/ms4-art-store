@@ -160,6 +160,15 @@ The site's primary goal is to sell canvas to the visitors who are looking for so
 
 ## Testing
 
+For testing the following credentials can be used:
+- Username: admin
+- Password: password
+- Email: admin@email.com
+
+Card payments:
+- Card number: 4242 4242 4242 4242
+- Zip & CCV must be filled out with any integers.
+
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
 - [W3C HTML Validator](https://validator.w3.org/) - [Results](static/doc/html_valid.png)
