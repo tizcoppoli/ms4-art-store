@@ -1,1 +1,1 @@
-Boutique Ado Confirmation for Order Number {{ order.order_number }}
+Painters Canvas Confirmation for Order Number {{ order.order_number }}
